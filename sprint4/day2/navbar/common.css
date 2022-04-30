@@ -1,0 +1,15 @@
+#container{
+    display: flex;
+    width:90%;
+    margin: auto;
+    justify-content: space-around;
+    background-color: blue;
+    /* color: white; */
+    font-size: 28px;
+    padding: 10px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}

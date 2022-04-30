@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        #container>div{
+            margin-right: 20px;
+            text-align: center;
+           
+            
+        }
+        p+img{
+            width: 30%;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Frontend</h1>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+var out=JSON.parse(localStorage.getItem("data"));
+console.log(out)
+
+out.forEach(function(ele){
+    var box=document.createElement("div")
+
+    var image=document.createElement("img");
+    image.setAttribute("src",ele.image);
+
+    var name=document.createElement("h2");
+    name.innerText=ele.name;
+
+    var role=document.createElement("p");
+    role.innerText=ele.role;
+
+    var logo=document.createElement("img");
+    logo.setAttribute("src",ele.logo);
+
+    box.append(image,name,role,logo);
+
+    document.querySelector("#container").append(box)
+
+});
+
+
+</script>
